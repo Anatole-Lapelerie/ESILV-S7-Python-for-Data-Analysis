@@ -25,4 +25,4 @@ Une fois ces trois opérations réalisées, il vous sera possible d'exécuter le
 
 ## Conclusion
 
-...
+*Conclusions à venir...*
