@@ -1,6 +1,6 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Prédiction du temps de transcodage des vidéos
 
-# Analyse de caractéristiques de vidéos
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Devoir 2021 de Python for Data Analysis à l'ESILV pour le Semestre 7 par **Anatole Lapelerie** incluant :
 1. Un powerpoint expliquant les tenants et aboutissants du problème ;
