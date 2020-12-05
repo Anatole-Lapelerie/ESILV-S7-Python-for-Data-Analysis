@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Analyse de caractéristiques de vidéos
 
 Devoir 2021 de Python for Data Analysis à l'ESILV pour le Semestre 7 par **Anatole Lapelerie** incluant :
