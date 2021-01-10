@@ -2,9 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Devoir 2021 de Python for Data Analysis à l'ESILV pour le Semestre 7 par **Anatole Lapelerie** incluant :
+Devoir 2021 de Python for Data Analysis à l'ESILV pour le Semestre 7 par Marwan Laroussi et Anatole Lapelerie incluant :
 1. Un powerpoint expliquant les tenants et aboutissants du problème ;
-2. Un code en python avec data-visualisation et modélisation ;
+2. Un code en Python avec data-visualisation et modélisation ;
 3. Une API Flask.
 
 On utilise deux datasets provenant du *Machine Learning Repository* de l'UCI, regroupés sour la référence [Online Video Characteristics and Transcoding Time Dataset Data Set](https://archive.ics.uci.edu/ml/datasets/Online+Video+Characteristics+and+Transcoding+Time+Dataset). Ces datasets sont les suivants :
