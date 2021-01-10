@@ -19,14 +19,13 @@ On utilise deux datasets provenant du *Machine Learning Repository* de l'UCI, re
 2. Créer un dossier `input` à la racine du projet ;
 3. Télécharger les deux [datasets](https://archive.ics.uci.edu/ml/datasets/Online+Video+Characteristics+and+Transcoding+Time+Dataset) dans le dossier `input`.
 
-Une fois ces trois opérations réalisées, il vous sera possible d'exécuter le code Python du Jupyter Notebook `main.ipynb`.
+Une fois ces trois opérations réalisées, il vous sera possible d'exécuter le code Python du Jupyter Notebook `main.ipynb` et l'API `app.py`.
+
+Une fois `app.py` exécuté, veuillez vous rendre à l'adresse `http://127.0.0.1:5000/` sur votre navigateur.
 
 ----
 
 ## Introduction au transcodage
-
-1. Intérêt du transcodage et de l'étude
-2. Fonctionnement du transcodage
 
 Cette partie introductive est également disponible dans le fichier main.
 
@@ -91,4 +90,18 @@ Le codec MPEG-1 utilise également des *d frames*, mais leur intérêt limité a
 
 ## Conclusion
 
-*Conclusions à venir...*
+Après avoir testé différents modèle, il s'est avéré que le modèle le plus performant était le réseau de neurones DNN réalisé avec Keras.
+
+Ce dernier est composé d'une couche de normalisation des paramètres d'entrée, de deux couches Dense à 64 neurones et d'un neurone de sortie qui retourne l'estimation de la durée de transcodage de la vidéo en fonction des paramètres d'entrée.
+
+L'entraînement du modèle se fait sur 20 époques, en suivant l'optimiseur Adam sur la fonction de perte *Mean Squared Error*.
+
+![[Entraînement du modèle DNN]](media/history_dnn.png)
+
+Le modèle n'est alors pas surentraîné : `val_loss` et `loss` sont équivalents. 
+
+En comparant les données de test avec les prédictions faites par le modèle, on trouve les caractéristiques suivantes : R² = 0.997 et MSE = 0.843.
+
+![[Données de test]](media/dnn_performances.png)
+
+Le modèle est globalement satisfaisant et prédit avec une bonne fiabilité les durées de transcodages de vidéo à mémoire allouée fixée et connue.
