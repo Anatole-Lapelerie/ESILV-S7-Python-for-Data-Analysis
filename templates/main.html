@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paramètres d'entrée</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+
+  </head>
+  <body>
+    <div class="main-block">
+      <h1>Paramètres d'entrée</h1>
+      <form action="/prediction/" method="post">
+        <div class="info">
+          <input class="fname" type="text" name="duration" placeholder="Durée (s)">
+          <input type="text" name="width" placeholder="Largeur (px)">
+          <input type="text" name="height" placeholder="Height (px)">
+          <input type="text" name="bitrate" placeholder="Bitrate (bit/s)">
+          <input type="text" name="framerate" placeholder="Framerate (/s)">
+          <input type="text" name="i" placeholder="Nombre de i-frames">
+          <input type="text" name="p" placeholder="Nombre de p-frames">
+          <input type="text" name="b" placeholder="Nombre de b-frames">
+          <input type="text" name="frames" placeholder="Nombre d'images">
+          <input type="text" name="i_size" placeholder="Taille des i-frames (octet)">
+          <input type="text" name="p_size" placeholder="Taille des p_frames (octet)">
+          <input type="text" name="size" placeholder="Taille du fichier (octet)">
+          <input type="text" name="o_bitrate" placeholder="Bitrate de sortie (bit/s)">
+          <input type="text" name="o_framerate" placeholder="Framerate de sortie (/s)">
+          <input type="text" name="o_width" placeholder="Largeur de sortie (px)">
+          <input type="text" name="o_height" placeholder="Hauteur de sortie (px)">
+          <input type="text" name="umem" placeholder="Mémoire allouée (octet)">
+          <select name="codec">
+            <option value="codec" disabled selected>Codec d'entrée</option>
+            <option value="mpeg4">mpeg4</option>
+            <option value="h264">h264</option>
+            <option value="vp8">vp8</option>
+            <option value="flv">flv</option>
+          </select>
+          <select name="o_codec">
+            <option value="o_codec" disabled selected>Codec de sortie</option>
+            <option value="o_mepg4">mpeg4</option>
+            <option value="o_h264">h264</option>
+            <option value="o_vp8">vp8</option>
+            <option value="o_flv">flv</option>
+          </select>
+          <select name="category">
+            <option value="category" disabled selected>Catégorie</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="News & Politics">News & Politics</option>
+            <option value="Autos & Vehicles">Autos & Vehicles</option>
+            <option value="Travel & Events">Travel & Events</option>
+            <option value="People & Blogs">People & Blogs</option>
+            <option value="Pets & Animals">Pets & Animals</option>
+            <option value="Sports">Sports</option>
+            <option value="Music">Music</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Nonprofits & Activis">Nonprofit & Activis</option>
+            <option value="Film & Animation">Film & Animation</option>
+            <option value="Science & Technology">Science & Technology</option>
+            <option value="Howto & Style">Howto & Style</option>
+            <option value="Education">Education</option>
+            <option value="Shows">Shows</option>
+          </select>
+        </div>
+        <button  id="predict" href='/result?submitted=true' class="button">Submit</button>
+      </form>
+    </div>   
+
+    <script>
+          if (document.location.href.indexOf("submitted=true") > -1){
+            $.dialog({
+                title: 'Prédiction',
+                content: 'Il faudra {{utime}} secondes pour transcoder la vidéo avec votre entrée.',
+            });
+        }
+            
+      </script>
+    
+</body>
+</html>
